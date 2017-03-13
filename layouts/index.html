@@ -7,18 +7,6 @@
     {{ .Content }}
   </main>
 
-  {{ $urlPre := "https://api.github.com" }}
-  {{ $git_user := "spf13" }}
-  {{ $user_json := getJSON $urlPre "/users/" $git_user "/repos" }}
-  {{ range $user_json }}
-    {{ $u := . }}
-   <h2>{{ $u.name }}</h2>
-    {{ $repo_json := getJSON $urlPre "/repos/" $git_user "/" $u.name }}
-    {{ range $k,$v :=   $repo_json }}
-     {{ $k }} =&gt; {{ $v }}<br><br>
-   {{ end }}
-    <hr>
-  {{ end }}
 
 
 {{ end }}

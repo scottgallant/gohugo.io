@@ -23,12 +23,12 @@
      <link href='/css/main.min.css' rel='stylesheet' type="text/css" />
      <!-- <link href='/css/tachyons-print.min.css' rel='stylesheet' type="text/css" media="print" /> -->
       {{ block "css" . }}
-        {{- partialCached "color-palette" . -}}
+        {{- partial "color-palette" . -}}
       {{ end }}
 
 <!-- TODO: add Search -->
   </head>
-  <body class="sans-serif bg-accent-color-light">
+  <body class="sans-serif primary-color-light">
 
 
     {{ block "header" . }}{{ partial "header" .}}{{ end }}

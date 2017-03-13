@@ -1,12 +1,6 @@
-{{ if .Params.featured_image }}
-  {{ $.Scratch.Add "imageClasses" "cover bg-center" }}
-  {{ $.Scratch.Add "bgColorClass" " bg-black-60" }}
-{{ else }}
- {{ $.Scratch.Add "bgColorClass" " bg-primary-color" }}
-{{ end }}
 
-<header class="{{ $.Scratch.Get "imageClasses" }}"{{ with .Params.featured_image }} style="background-image: url({{ . }});"{{ end }}>
-  <div class="pb3-m pb6-l{{ $.Scratch.Get "bgColorClass" }}">
+<header class="bg-primary-color-dark">
+  <div class="pb3-m pb6-l">
 
             <nav class="dt w-100 mw8 center">
 
@@ -23,8 +17,8 @@
             </nav>
 
             <div class="tc-l mt4 mt5-m mt6-l ph3">
-
-                <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">{{ .Site.Title }}</h1>
+                <img src="/images/hugo-logo.svg" alt="Hugo Logo" class="h4">
+                <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">{{ .Site.Params.description }}</h1>
                 {{ with .Site.Params.Subtitle }}
                   <h2 class="fw1 f3 white-80 mt3 mb4">
                     {{ .}}
