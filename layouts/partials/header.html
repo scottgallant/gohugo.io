@@ -1,51 +1,46 @@
 <header class="bg-primary-color-dark ph4">
     {{ partial "svg/github-corner.svg" . }}
-  <div class="cf flex-ns flex-wrap justify-betweenTK  w-90-ns center justify-center-ns pv4 pv6-ns">
+  <div class="flex-ns flex-wrap w-90-ns center justify-center-ns pv4 pv6-ns">
 
+    <section class="w-100 w-50-ns tc">
 
+      <div class="w-70 w-70-ns center tc">
+        {{ partial "svg/hugo-logo.svg" . }}
+      </div>
 
-    <section class="w-50-ns center tc">
+      <ul class="list tc ma0 pa0 dn db-ns">
+        {{ range .Site.Menus.home }}
+          <li class="f4 f3-ns dib mt4 mh3">
+            <a href="{{ .URL }}" class="link white dim">
+              {{ .Name }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
 
-        <!-- <img src="/images/hugo-logo.svg" alt="Hugo Logo" class="w-80 w-90-ns"> -->
-        <div class="w-70 w-70-ns center tc">
-          {{ partial "svg/hugo-logo.svg" . }}
-        </div>
-        <ul class="list tc ma0 pa0 dn db-ns">
-          {{ range .Site.Menus.home }}
-            <li class="f4 f3-ns dib mt4 mh3">
-              <a href="{{ .URL }}" class="link white dim">
-                {{ .Name }}
-              </a>
-            </li>
-          {{ end }}
-        </ul>
-        <div class="w4 mv4 center dn db-ns">
-          <a class="f6 db link grow tc v-mid bg-blue white ba b--blue ph3 pv2 br1" href="/">Quick Start</a>
-        </div>
-
-
+      <div class="w4 mv4 center dn db-ns">
+        <a class="f6 db link grow tc v-mid bg-blue white ba b--blue ph3 pv2 br1" href="/">Quick Start</a>
+      </div>
+      
     </section>
 
-
-    <section class="w-50-ns tc">
+    <section class="w-100 w-50-ns tc">
 
       {{ with .Site.Params.description }}
-        <h1 class="f3 f2-l white-90 mb0 lh-title pv3 pv0-ns">
+        <h2 class="f3 f2-l white-90 m0 lh-title pv3 pv0-ns">
           {{ . }}
-        </h1>
+        </h2>
       {{ end }}
 
       <div class="lh-copy f4 w-90-ns center fw2 moon-gray tc tc-ns">
         {{ .Content }}
       </div>
+
       <div class="w4 mv4 center dn-ns">
         <a class="f6 db link grow tc v-mid bg-blue white ba b--blue ph3 pv2 br1" href="/">Quick Start</a>
       </div>
+
     </section>
-
-
-
-
 
   </div>
 </header>
