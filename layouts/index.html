@@ -8,18 +8,26 @@
 
   </main>
 
-  {{ $globalVariables := .Site.Data.globals }}
-  {{ $section_classes := $globalVariables.section_two_column_classes }}
-  {{ $interior_classes := $globalVariables.section_two_column_classes_interior }}
-  <section class="{{ $section_classes }} w-100 v-top pa4">
-    <!-- TODO: It doesn't look like the second sort parameter (interior) actually sorts -->
-    {{ range sort (sort (where .Data.Pages "Section" "basics") ".Title" "asc") ".Weight" "desc"  }}
-      {{ partial "section-boxes" (dict "context" . "classes" $interior_classes "fullcontent" true) }}
+
+  <section class="w-100 v-top black pa4">
+    {{ range .Params.features  }}
+      <div class="relative">
+        <h1 class="f3 near-black">
+          {{ .heading }}
+        </h1>
+        <div class="nested-links f5 black nested-copy-line-height">
+          <p>
+            {{ .copy  }}
+          </p>
+        </div>
+      </div>
     {{ end }}
-  </section>
 
+</section>
+
+    {{ partial "home-page-sections/installation" . }}
     {{ partial "home-page-sections/themes" . }}
-
-  {{ partial "home-page-sections/open-source-involvement" . }}
+    {{ partial "home-page-sections/tweets" . }}
+    {{ partial "home-page-sections/open-source-involvement" . }}
 
 {{ end }}
