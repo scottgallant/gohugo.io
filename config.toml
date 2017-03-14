@@ -11,10 +11,16 @@ DefaultContentLanguage = "en"
   description = "The world’s fastest framework for building websites"
   map_link = "https://www.google.com/maps/place/Civic+Hall/@40.742284,-73.9962257,17z/data=!3m1!4b1!4m5!3m4!1s0x89c259a3a3340f3d:0xba4060a01c13cc2a!8m2!3d40.74228!4d-73.994037"
 
-  ghcontentdir = "https://github.com/theNewDynamic/civic-hall-member-guide/tree/master/content"
-  twitter = "https://twitter.com/CivicHall"
-  facebook = "https://www.facebook.com/CivicHallNYC"
-  instagram = "https://www.instagram.com/civichall/"
+  ## Gh repo for site footer (include trailing slash)
+ ghrepo = "https://github.com/spf13/hugo/"
+ ## GitHub Docs Repository Base URL (include trailing slash)
+ ### https://github.com/spf13/hugo/tree/master/docs
+ ### Edit content repo (set to automatically enter "edit" mode => good for "improve this page" links)
+ ghdocsrepo = "https://github.com/rdwatters/hugo-docs-concept/edit/master/"
+ ## Gitter URL
+ gitter = "https://gitter.im/spf13/hugo"
+ ## Discuss Forum URL
+ forum = "https://discuss.gohugo.io"
 
 [taxonomies]
   tag = "tags"
