@@ -18,7 +18,7 @@ features:
     copy: Shortcodes keeps your content readable and infinitely extensible.
 
   - heading: Built-in Templates
-    copy: Hugo ships with pre-made templates to make quick work of SEO and other functions.
+    copy: Hugo ships with pre-made templates to make quick work of SEO, commenting, analytics and other functions.
 
   - heading: Multilingual and i18n
     copy: Hugo provides full i18n support for multilinguage sites with the same straightforward development experience Hugo users love in single-language sites.
