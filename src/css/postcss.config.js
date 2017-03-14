@@ -17,9 +17,6 @@ module.exports = {
     discardComments: {
       removeAll: true
     },
-    minifyFontValues: false,
-    autoprefixer: {
-      'browsers': '> 5%'
-    }
+    minifyFontValues: false
   }
 }
