@@ -14,7 +14,7 @@
      {{ .Hugo.Generator }}
 
       {{ if eq (getenv "HUGO_ENV") "production" }}
-          {{- partial "seo/main" . -}}
+          {{- partial "seo" . -}}
       {{ else }}
         <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
       {{ end }}
