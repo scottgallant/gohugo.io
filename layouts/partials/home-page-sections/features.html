@@ -1,0 +1,26 @@
+{{ $globalVariables := .Site.Data.globals }}
+{{ $section_classes := $globalVariables.section_flex_wrap }}
+{{ $interior_classes := $globalVariables.section_flex_wrap_interior }}
+
+
+<section class="{{ $globalVariables.section_base_classes }}">
+  <h3 class="f1 primary-color-dark">
+    What makes Hugo so special?
+  </h3>
+
+  <div class="{{ $section_classes }} ">
+    {{ range .Params.features  }}
+      <div class="{{ $interior_classes }} relative bg-primary-color pv2 ph3 mr4 mb2 br1">
+        <h1 class="f3 near-white">
+          {{ .heading }}
+        </h1>
+        <div class="nested-links f5 black nested-copy-line-height">
+          <p>
+            {{ .copy  }}
+          </p>
+        </div>
+      </div>
+    {{ end }}
+  </div>
+
+</section>

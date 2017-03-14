@@ -17,7 +17,7 @@ fonts:
 
 # classes
 copy_classes: "nested-copy-line-height nested-links nested-img mid-gray measure-wide-l"
-
+section_base_classes: "w-100 ph4 pv6"
 # uses CSS Columns to wrap a masonry grid layout
 section_two_column_classes: "w-100 v-top column-count-2-l column-gap-1-l"
 section_two_column_classes_interior: "break-inside-avoid-l nested-copy-line-height"

@@ -1,10 +1,12 @@
-<section class="dark-gray bg-accent-color pv5 ph4 flex-ns flex-wrap">
+{{ $globalVariables := .Site.Data.globals }}
+<section class="{{ $globalVariables.section_base_classes }} dark-gray bg-accent-color">
+<div class="flex-ns flex-wrap">
 
   <div class="w-100 w-50-ns tc">
 
       <h3 class="f1 black">100s of Themes</h3>
       <p class="f3">
-        Hugo provides a robust theming system that is easy to implement but capable of producing even the most complicated websites. 
+        Hugo provides a robust theming system that is easy to implement but capable of producing even the most complicated websites.
       </p>
 
   </div>
@@ -14,5 +16,5 @@
     <img src="/images/home-page-themes-example.png" alt="" class="shadow-5">
 
   </div>
-
+</div>
 </section>

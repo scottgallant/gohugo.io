@@ -1,4 +1,6 @@
-<section class="dark-gray bg-near-white ph4 bb bt b--light-gray flex-ns flex-wrap">
+{{ $globalVariables := .Site.Data.globals }}
+<section class="{{ $globalVariables.section_base_classes }} bg-white bb bt b--light-gray black">
+<div class="flex-ns flex-wrap">
   <!-- LEFT -->
   <div class="w-100 w-50-ns tc pv4 pv5-ns">
     <div class="w-30-ns center">
@@ -32,5 +34,5 @@
       </li>
     </ul>
   </div>
-
+</div>
 </section>
