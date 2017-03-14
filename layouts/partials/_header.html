@@ -1,0 +1,38 @@
+<header class="bg-primary-color-dark ph4">
+  {{ partial "svg/github-corner.svg" . }}
+
+  <div class="cf flex-ns flex-wrap pv4 pv6-ns">
+
+    <section class="w-100 w-two-thirds-ns">
+
+      <div class="center tc w-60-ns">
+        <img src="/images/hugo-logo.svg" alt="Hugo Logo" class="w-80 w-90-ns">
+        {{ with .Site.Params.description }}
+          <h1 class="f3 f2-l white-90 mb0 lh-title pv3 pv0-ns">
+            {{ . }}
+          </h1>
+        {{ end }}
+      </div>
+
+    </section>
+
+    <nav class="w-100 w-third-ns dn db-ns">
+      <ul class="list flex flex-wrap flex-column-ns justify-between ma0 pa0">
+        <!-- {{ range .Params.highlights }}
+          <li class="f3 pb4 accent-colorTK ">
+            {{ .}}
+          </li>
+        {{ end}} -->
+        {{ range .Site.Menus.home }}
+          <li class="f4 f3-ns pb4 accent-colorTK ">
+            <a href="{{ .URL }}" class="link accent-color dim">
+              {{ .Name }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+      <a class="f6 no-underline grow dib v-mid bg-blue white ba b--blue ph3 pv2 br1 mb3" href="/">Quick Start</a>
+    </nav>
+
+  </div>
+</header>

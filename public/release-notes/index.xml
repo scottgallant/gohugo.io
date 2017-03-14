@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Latest Releases on Hugo</title>
+    <link>http://example.org/release-notes/index.xml</link>
+    <description>Recent content in Latest Releases on Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Mar 2017 12:00:00 -0500</lastBuildDate>
+    <atom:link href="http://example.org/release-notes/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>0.19 February 27th 2017</title>
+      <link>http://example.org/release-notes/0-19/</link>
+      <pubDate>Mon, 27 Feb 2017 13:53:58 -0400</pubDate>
+      
+      <guid>http://example.org/release-notes/0-19/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>0.18.1 December 30th 2016</title>
+      <link>http://example.org/release-notes/0-18/</link>
+      <pubDate>Fri, 30 Dec 2016 13:54:02 -0400</pubDate>
+      
+      <guid>http://example.org/release-notes/0-18/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>0.17.0** October 7th 2016</title>
+      <link>http://example.org/release-notes/0-17/</link>
+      <pubDate>Fri, 07 Oct 2016 13:54:06 -0400</pubDate>
+      
+      <guid>http://example.org/release-notes/0-17/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>0.16.0 June 6th 2016</title>
+      <link>http://example.org/release-notes/0-16/</link>
+      <pubDate>Mon, 06 Jun 2016 13:54:06 -0400</pubDate>
+      
+      <guid>http://example.org/release-notes/0-16/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

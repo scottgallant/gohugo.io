@@ -1,35 +1,48 @@
-
-<header class="bg-primary-color-dark">
-  <div class="pb3-m pb6-l">
-
-            <nav class="dt w-100 mw8 center">
-
-              <div class="dtc v-mid">
-                {{ range .Site.Menus.main }}
-                  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="{{ .URL }}" >{{ .Name }}</a>
-                {{ end }}
-              </div>
-              <div class="dtc v-mid tr pa3">
-                {{ range .Site.Menus.secondary }}
-                  <a class="f6 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="{{ .URL }}" >{{ .Name }}</a>
-                {{ end }}
-              </div>
-            </nav>
-
-            <div class="tc-l mt4 mt5-m mt6-l ph3">
-                <img src="/images/hugo-logo.svg" alt="Hugo Logo" class="h4">
-                <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">{{ .Site.Params.description }}</h1>
-                {{ with .Site.Params.Subtitle }}
-                  <h2 class="fw1 f3 white-80 mt3 mb4">
-                    {{ .}}
-                  </h2>
-                {{ end }}
-                <a class="f6 no-underline grow dib v-mid bg-blue white ba b--blue ph3 pv2 mb3" href="/">Join Our Meetup</a>
-                <span class="dib v-mid ph3 white-70 mb3">or</span>
-                <a class="f6 no-underline grow dib v-mid white ba b--white ph3 pv2 mb3" href="">Submit a Job or Profile</a>
+<header class="bg-primary-color-dark ph4">
+    {{ partial "svg/github-corner.svg" . }}
+  <div class="cf flex-ns flex-wrap justify-betweenTK  w-80-ns center justify-center-ns pv4 pv6-ns">
 
 
+
+    <section class="w-40-ns center tc">
+
+        <!-- <img src="/images/hugo-logo.svg" alt="Hugo Logo" class="w-80 w-90-ns"> -->
+        <div class="w-70 w-60-ns center">
+          {{ partial "svg/hugo-logo.svg" . }}
+        </div>
+        {{ with .Site.Params.description }}
+          <h1 class="f3 f2-l white-90 mb0 lh-title pv3 pv0-ns">
+            {{ . }}
+          </h1>
+        {{ end }}
+
+
+    </section>
+
+
+    <section class="w-50-ns">
+      <ul class="list tl ma0 pa0 bb b--white-20 dn db-ns">
+        {{ range .Site.Menus.home }}
+          <li class="f4 f4-ns dib pr4">
+            <a href="{{ .URL }}" class="link moon-gray dim">
+              {{ .Name }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+
+
+      <div class="lh-copy f4 fw2 moon-gray">
+        {{ .Content }}
       </div>
-    </div>
+      <div class="w4 mv3 fr">
+        <a class="f6 db link grow tc v-mid bg-blue white ba b--blue ph3 pv2 br1" href="/">Quick Start</a>
+      </div>
+    </section>
 
+
+
+
+
+  </div>
 </header>

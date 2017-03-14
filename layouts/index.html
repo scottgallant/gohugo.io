@@ -1,5 +1,6 @@
-{{ define "hero" }}
-  {{ partial "hero" . }}
+{{ define "header" }}
+  {{ partial "header" . }}
+  {{ partial "boxes-small-news" . }}
 {{ end }}
 
 {{ define "main" }}
@@ -7,6 +8,13 @@
     {{ .Content }}
   </main>
 
-
-
+  {{ $globalVariables := .Site.Data.globals }}
+  {{ $section_classes := $globalVariables.section_two_column_classes }}
+  {{ $interior_classes := $globalVariables.section_two_column_classes_interior }}
+  <section class="{{ $section_classes }} w-100 v-top pa4">
+    <!-- TODO: It doesn't look like the second sort parameter (interior) actually sorts -->
+    {{ range sort (sort (where .Data.Pages "Section" "basics") ".Title" "asc") ".Weight" "desc"  }}
+      {{ partial "section-boxes" (dict "context" . "classes" $interior_classes "fullcontent" true) }}
+    {{ end }}
+  </section>
 {{ end }}

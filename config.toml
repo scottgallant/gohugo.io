@@ -1,6 +1,9 @@
 languageCode = "en-us"
 title = "Hugo"
 baseURL = "http://example.org/"
+MetaDataFormat = "yaml"
+DefaultContentLanguage = "en"
+#SectionPagesMenu = "main"
 
 
 [params]
@@ -20,25 +23,25 @@ baseURL = "http://example.org/"
 
 
 
-[[menu.main]]
+[[menu.home]]
   name = "Docs"
   weight = 1
   identifier = "docs"
   url = "/docs/"
 
-[[menu.main]]
+[[menu.home]]
   name = "Github"
-  weight = 5
-  identifier = "github"
-  url = "/github/"
+  weight = 1
+  identifier = "gitub"
+  url = "/gitub/"
 
-[[menu.main]]
+[[menu.home]]
   name = "Community"
   weight = 10
   identifier = "community"
   url = "/community/"
 
-[[menu.main]]
+[[menu.home]]
   name = "Themes"
   weight = 15
   identifier = "themes"

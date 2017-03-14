@@ -1,6 +1,6 @@
 colors:
-  primary-color:        "#3A4D58"
-  primary-color-dark:   "#0f2634"
+  primary-color:        "#628395" # this is still a [wip]
+  primary-color-dark:   "#0A1922" #"#0f2634"
   primary-color-light:  "#f6f6f6"
   accent-color:         "#EBB951"
   accent-color-light:   "#FF4088"

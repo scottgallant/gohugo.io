@@ -2533,9 +2533,9 @@ tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
 
-typeface-open-sans@0.0.22:
+typeface-muli@^0.0.22:
   version "0.0.22"
-  resolved "https://registry.yarnpkg.com/typeface-open-sans/-/typeface-open-sans-0.0.22.tgz#cc3b708d355b433a9327126150281f3ea68887c0"
+  resolved "https://registry.yarnpkg.com/typeface-muli/-/typeface-muli-0.0.22.tgz#31b34ce86595a29777f6a19a90da1b548ba671a6"
 
 uglify-js@^2.7.5:
   version "2.7.5"
