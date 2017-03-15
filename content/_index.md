@@ -8,7 +8,7 @@ features:
     copy: Jettison expensive runtime dependencies, and let Go’s incomparable I/O primitives do the work for you. For the first time, build your sites in micro- and milliseconds. At less than .7 ms per page, the average site builds in less than a second.
 
   - heading: Robust Content Management
-    tagline: Structure your content how you like.
+    tagline: Flexibility rules. Hugo is a content strategist's dream. 
     copy: Hugo offers support for taxonomies, unlimited content types, DRY templating, URL management, menus, archetypes, and summaries, all without the need for plugins. Need dynamic, API-driven content? That's baked in too.
 
   - heading: Markdown Without Limits
@@ -16,7 +16,7 @@ features:
     copy: Hugo natively supports Github Flavored Markdown, as well as Asciidoc, reStructuredText, and Org-mode through external helpers. Write your front matter in YAML, JSON, or TOML; whichever works best for you.
 
   - heading: Shortcodes
-    tagline: Shortcodes are Markdown's hidden super power.
+    tagline: Shortcodes are Markdown's hidden super power. Hugo has them, and you can even write your own.
     copy: Hugo loves Markdown because of its simple content format, but there are times when markdown falls short. We think this contradicts the beautiful simplicity of markdown’s syntax. Hugo created shortcodes to circumvent these limitations.
 
   - heading: Built-in Templates
@@ -24,7 +24,7 @@ features:
     copy: Hugo ships with pre-made templates to make quick work of SEO, commenting, analytics and other functions.
 
   - heading: Multilingual and i18n
-    tagline: Polyglot baked in
+    tagline: Polyglot baked in.
     copy: Hugo provides full i18n support for multi-language sites with the same straightforward development experience Hugo users love in single-language sites.
 
 ---
