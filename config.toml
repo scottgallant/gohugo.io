@@ -33,22 +33,22 @@ DefaultContentLanguage = "en"
   name = "Docs"
   weight = 1
   identifier = "docs"
-  url = "/docs/"
+  url = "http://gohugo.io/overview/introduction/"
 
 [[menu.home]]
   name = "Github"
   weight = 1
   identifier = "gitub"
-  url = "/gitub/"
+  url = "https://github.com/spf13/hugo"
 
 [[menu.home]]
   name = "Community"
   weight = 10
   identifier = "community"
-  url = "/community/"
+  url = "https://discuss.gohugo.io/"
 
 [[menu.home]]
   name = "Themes"
   weight = 15
   identifier = "themes"
-  url = "/themes/"
+  url = "http://themes.gohugo.io/"
