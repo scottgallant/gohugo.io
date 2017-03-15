@@ -1,7 +1,7 @@
 <footer class="cf fixed relative-l bg-black bottom-0 w-100 pa3" role="contentinfo">
 
-    <div class="dn db-l pv3 flex-ns flex-wrap w-80 center justify-between">
-      <div class="w-third">
+    <div class="dn db-l flex-ns flex-wrap w-80 center justify-between">
+      <div class="w-third pv3 dn db-l">
          <div class="mb3 tc nested-links">
            By <a href="http://spf13.com" class="link">spf13</a> and <a href="https://github.com/spf13/hugo/contributors" class="link">friends</a>
          </div>
@@ -10,7 +10,7 @@
           </div>
       </div>
 
-      <div class="w-third dn db-l">
+      <div class="w-third pv3 dn db-l">
         <ul class="list ma0 pa0 w-50 center">
           <li><a href="{{.Site.Params.ghrepo}}" class="link white dim pv2 db">File an Issue</a></li>
           <li><a href="{{.Site.Params.forum}}" class="link white dim pv2 db">Get Help</a></li>
@@ -18,7 +18,7 @@
         </ul>
       </div>
 
-      <div class="w-third dn db-l">
+      <div class="w-third pv3 dn db-l">
         <ul class="list ma0 pa0">
         	<li><a href="https://twitter.com/gohugoio" class="link white dim pv2 db">@GoHugoIO</a></li>
           <li><a href="https://twitter.com/spf13" class="link white dim pv2 db">@spf13</a></li>
@@ -33,9 +33,9 @@
       {{ partial "nav-links" . }}
   </div>
 
-  <div class="flex">
-    <span onclick="myFunction()" class="flex-auto dib dn-ns f6 tc db mt4-ns ph3 pv2 link white hover-bg-primary-color ba b--white-40 w-auto">MENU</span>
-    <a href="/basics/" class="flex-auto ml2 dib dn-ns f6 tc db mt4-ns ph3 pv2 link white hover-bg-primary-color ba b--white-40 w-auto">DOCS</a>
+  <div class="flex dn-l">
+    <span onclick="myFunction()" class="flex-auto dib dn-l f6 tc db mt4-ns ph3 pv2 link white hover-bg-primary-color ba b--white-40 w-auto">MENU</span>
+    <a href="/basics/" class="flex-auto ml2 dib dn-l f6 tc db mt4-ns ph3 pv2 link white hover-bg-primary-color ba b--white-40 w-auto">DOCS</a>
   </div>
 </footer>
 
