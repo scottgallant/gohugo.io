@@ -1,5 +1,5 @@
 {{ $globalVariables := .Site.Data.globals }}
-<section class="w-100 ph4 pv4 bg-white bb bt b--light-gray black">
+<section class="w-100 ph4 pv4 bg-primary-color-light bb bt b--light-gray mid-gray">
 <div class="flex-ns flex-wrap">
   <!-- LEFT -->
   <div class="w-100 w-50-ns tc pv4 pv5-ns">
@@ -12,24 +12,28 @@
   <!-- RIGHT --> <!-- TODO: Check links -->
   <div class="w-100 w-50-ns pb7  pv4-m pv5-l">
     <h3 class="f3 mb2 mt0 accent-color-light">We welcome all contributions</h3>
-      <p class="f4 dark-gray">
-        Fork the repo and work on an issue
-      </p>
+    <ul class="list ma0 pa0">
+      <li class="mb3 f4">
+        <a href="{{.Site.Params.ghrepo}}" class="link mid-gray dim">
+          Fork the repo and work on an issue
+        </a>
+      </li>
+    </ul>
     <h3 class="f3 mb3 mt4 accent-color-light">More ways to contribute</h3>
     <ul class="list ma0 pa0">
       <li class="mb3 f4">
-        <a href="https://gohugo.io/overview/introduction/" class="link dark-gray dim">
+        <a href="https://gohugo.io/overview/introduction/" class="link mid-gray dim">
           Help improve the docs
         </a>
       </li>
       <li class="mb3 f4">
-        <a href="http://themes.gohugo.io" class="link dark-gray dim">
+        <a href="http://themes.gohugo.io" class="link mid-gray dim">
           Design a theme
         </a>
       </li>
       <li class="mb3 f4">
 
-        <a href="https://discuss.gohugo.io/" class="link dark-gray dim">
+        <a href="https://discuss.gohugo.io/" class="link mid-gray dim">
           Help others in the forums
         </a>
       </li>

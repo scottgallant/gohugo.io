@@ -1,26 +1,62 @@
 {{ $globalVariables := .Site.Data.globals }}
-{{ $section_classes := $globalVariables.section_flex_wrap }}
-{{ $interior_classes := $globalVariables.section_flex_wrap_interior }}
+{{ $.Scratch.Add "classBox" "mv4 dt flexTK center" }}
+{{ $.Scratch.Add "classBoxInner" "db dtc-ns w-100 w-30-ns" }}
+{{ $.Scratch.Add "classHeading" "lh-title black f2 nb3" }}
+{{ $.Scratch.Add "classCopy" "db dtc-ns v-mid w-100 gray lh-copy bg-white shadow-4 pa4" }}
+{{ $.Scratch.Add "classTagline" "dtc-ns lh-title f4 b black w-25-ns v-mid pl4 pr5 accent-color-dark" }}
+{{ $.Scratch.Add "classTaglineMobile" "dn-ns b w-100 mt4 primary-color" }}
 
+<section class="w-100 ph4 ph5-ns pb6 pt3 ">
+  <div class="w-80-l center">
 
-<section class="{{ $globalVariables.section_base_classes }}">
-  <h3 class="f1 primary-color-dark">
-    What makes Hugo so special?
-  </h3>
+    <h3 class="f1 primary-color-dark">
+      What makes Hugo so special?
+    </h3>
 
-  <div class="{{ $section_classes }} ">
-    {{ range .Params.features  }}
-      <div class="{{ $interior_classes }} relative bg-primary-color-light bt pv2 ph3 mr4 mb2 br2 bw3" style="border-color:#33ba91;">
-        <h1 class="f3 black">
-          {{ .heading }}
-        </h1>
-        <div class="nested-links f5 black nested-copy-line-height">
-          <p>
-            {{ .copy  }}
-          </p>
-        </div>
-      </div>
+    {{ if .Params.features }}
+
+      {{ range .Params.features }}
+        {{ $.Scratch.Add "i" 1 }}
+        {{ $i := $.Scratch.Get "i" }}
+
+        {{ if modBool $i 2 }}
+          <div class="{{ $.Scratch.Get "classBox" }}">
+            <div class="dn {{ $.Scratch.Get "classTagline" }}">
+              {{.tagline}}
+            </div>
+            <div class="{{ $.Scratch.Get "classBoxInner" }} pl3-ns">
+              <h3 class="{{ $.Scratch.Get "classHeading" }}">
+                {{ .heading }}
+              </h3>
+              <div class="dn-ns {{ $.Scratch.Get "classTaglineMobile" }}">
+                {{.tagline}}
+              </div>
+              <p class="{{ $.Scratch.Get "classCopy" }}">
+                {{ .copy }}
+              </p>
+            </div>
+          </div>
+        {{ else }}
+
+          <div class="{{ $.Scratch.Get "classBox" }}">
+            <div class="{{ $.Scratch.Get "classBoxInner" }} pr3-ns">
+              <h3 class="{{ $.Scratch.Get "classHeading" }}">
+                {{ .heading }}
+              </h3>
+              <div class="dn-ns {{ $.Scratch.Get "classTaglineMobile" }}">
+                {{.tagline}}
+              </div>
+              <p class="{{ $.Scratch.Get "classCopy" }}">
+                {{ .copy }}
+              </p>
+            </div>
+            <div class="dn {{ $.Scratch.Get "classTagline" }}">
+              {{.tagline}}
+            </div>
+          </div>
+        {{ end }}
+      {{ end }}
     {{ end }}
-  </div>
 
+  </div>
 </section>
