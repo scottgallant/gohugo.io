@@ -1,12 +1,12 @@
 <section class="relative w-100 bg-black white">
   <div class="flex flex-wrap">
-    <a href="/announcements" class="link accent-color tr-ns f6 w-100 w-50-m w-10-l bg-animate hover-bg-accent-color hover-white pv3 pv4-l ph3 ph4-l dib">
+    <a href="#" class="link accent-color tr-ns f6 w-100 w-50-m w-10-l bg-animate hover-bg-accent-color hover-white pv3 pv4-l ph3 ph4-l dib">
       Latest News:
     </a>
     {{ range first 4 ( sort (where .Data.Pages "Section" "release-notes") "Date" "desc" ) }}
       {{ $.Scratch.Add "i" 1 }}{{ $i := $.Scratch.Get "i" }}
       <!-- only show 2 boxes on mobile -->
-      <a href="{{ .URL }}" class="link lh-copy light-gray f6 w-100 w-50-m w-20-l bg-animate hover-bg-accent-color hover-white pv3 pv4-l ph3 ph4-l{{ if ge $i 2 }} dn dib-l{{ else }} dib{{ end }}">
+      <a href="#" class="link lh-copy light-gray f6 w-100 w-50-m w-20-l bg-animate hover-bg-accent-color hover-white pv3 pv4-l ph3 ph4-l{{ if ge $i 2 }} dn dib-l{{ else }} dib{{ end }}">
         <span class="f6 gray pb1 db">
           {{ .Date.Format "January 2, 2006" }}
         </span>
