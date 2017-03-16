@@ -27,5 +27,4 @@ features:
     copy: Hugo provides full i18n support for multi-language sites with the same straightforward development experience Hugo users love in single-language sites.
 
 ---
-Created in 2013, Hugo is one of the most popular static site generators. And for good reason: with it’s
-amazing speed and flexibility, Hugo makes building websites fun again.
+Hugo is one of the most popular open-source static site generators. With it’s amazing speed and flexibility, Hugo makes building websites fun again.
