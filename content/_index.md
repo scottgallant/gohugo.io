@@ -10,10 +10,6 @@ features:
     tagline: Flexibility rules. Hugo is a content strategist's dream.
     copy: Hugo offers support for taxonomies, unlimited content types, DRY templating, URL management, menus, archetypes, and summaries, all without the need for plugins. Need dynamic, API-driven content? That's baked in too.
 
-  - heading: Markdown Without Limits
-    tagline: Write your content how you want to.
-    copy: Hugo natively supports Github Flavored Markdown, as well as Asciidoc, reStructuredText, and Org-mode through external helpers. Write your front matter in YAML, JSON, or TOML; whichever works best for you.
-
   - heading: Shortcodes
     tagline: Shortcodes are Markdown's hidden super power. Hugo has them, and you can even write your own.
     copy: Hugo loves Markdown because of its simple content format, but there are times when markdown falls short. We think this contradicts the beautiful simplicity of markdown’s syntax. Hugo created shortcodes to circumvent these limitations.
