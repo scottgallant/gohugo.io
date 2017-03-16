@@ -36,10 +36,10 @@ DefaultContentLanguage = "en"
   url = "http://gohugo.io/overview/introduction/"
 
 [[menu.home]]
-  name = "Github"
+  name = "Blog"
   weight = 1
-  identifier = "gitub"
-  url = "https://github.com/spf13/hugo"
+  identifier = "blog"
+  url = "/news/"
 
 [[menu.home]]
   name = "Community"
