@@ -5,6 +5,8 @@ MetaDataFormat = "yaml"
 DefaultContentLanguage = "en"
 #SectionPagesMenu = "main"
 theme = "gohugo"
+paginate =                    3
+#paginatePath =                "page"
 
 [params]
   logo = "/images/hugo-logo.svg"

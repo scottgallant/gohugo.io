@@ -1,4 +1,5 @@
 @import '_tachyons';
+@import '_hugo-internal-template-styling';
 @import '_columns';
 @import '_font-family';
 @import 'font/_muli-200';

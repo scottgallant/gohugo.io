@@ -13,10 +13,14 @@
   {{ $section_classes := $globalVariables.section_two_column_classes }}
   {{ $interior_classes := $globalVariables.section_two_column_classes_interior }}
 <section class="{{ $section_classes }} w-100 v-top">
-  {{ range sort (sort (where .Data.Pages "Section" "news") ".Date" "desc") ".Weight" "desc"  }}
+
+  {{ range .Paginator.Pages }}
       {{ partial "section-boxes" (dict "context" . "classes" $interior_classes "fullcontent" false) }}
   {{ end }}
 </section>
+<div class="nested-list-reset nested-links">
+    {{ template "_internal/pagination.html" . }}
+</div>
 
 </div>
 {{ end }}
