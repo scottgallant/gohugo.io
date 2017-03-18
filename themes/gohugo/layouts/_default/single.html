@@ -6,8 +6,19 @@
     <h4 class="f6">
       {{ humanize .Section | upper  }}
     </h4>
+
+
+
+
+    {{ partial "components/author-github-data" (dict "context" . "size" "110") }}
+
     <h1 class="f1 primary-color">
       {{ .Title }}
+
+
+
+
+
     </h1>
     <div class="{{ $globalVariables.copy_classes }}">
         {{ .Content | markdownify }}
