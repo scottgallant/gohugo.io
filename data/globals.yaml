@@ -1,7 +1,7 @@
 colors:
   primary-color:        "#33ba91" # this is still a [wip]
   primary-color-dark:   "#0A1922" #"#0f2634"
-  primary-color-light:  "#f9f9f9"
+  primary-color-light:  "#f9f9f9" #using this as the background color for the body
   accent-color:         "#EBB951"
   accent-color-light:   "#FF4088"
   accent-color-dark:    "#0594CB"
