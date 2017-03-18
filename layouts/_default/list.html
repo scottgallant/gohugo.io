@@ -1,10 +1,22 @@
 {{ define "main" }}
+<div class="w-100 ph4 ph5-ns pb5 pb6-ns pt1 pt3-ns ">
   <article class="cf pa3 pa4-m pa4-l nested-copy-line-height nested-img">
-    <h1 class="primary-color">
+    <h1 class="primary-color-dark">
       {{ .Title }}
     </h1>
     <div class="{{ .Site.Params.copyClass }}">
       {{ .Content }}
     </div>
   </article>
+
+  {{ $globalVariables := .Site.Data.globals }}
+  {{ $section_classes := $globalVariables.section_two_column_classes }}
+  {{ $interior_classes := $globalVariables.section_two_column_classes_interior }}
+<section class="{{ $section_classes }} w-100 v-top">
+  {{ range sort (sort (where .Data.Pages "Section" "news") ".Date" "desc") ".Weight" "desc"  }}
+      {{ partial "section-boxes" (dict "context" . "classes" $interior_classes "fullcontent" false) }}
+  {{ end }}
+</section>
+
+</div>
 {{ end }}
