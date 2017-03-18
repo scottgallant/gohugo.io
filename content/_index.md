@@ -4,7 +4,7 @@ date: 2017-03-02T12:00:00-05:00
 features:
   - heading: Blistering Speed
     tagline: What's modern about waiting for your site to build? With Hugo, you don't have to.
-    copy: Jettison expensive runtime dependencies, and let Go’s incomparable I/O primitives do the work for you. For the first time, build your sites in micro- and milliseconds. At less than .7 ms per page, the average site builds in less than a second.
+    copy: Hugo is the fastest tool of its kind. At less than 1 ms per page, the average site builds in less than a second.
 
   - heading: Robust Content Management
     tagline: Flexibility rules. Hugo is a content strategist's dream.
