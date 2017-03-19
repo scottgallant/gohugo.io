@@ -15,9 +15,7 @@ code, .code {
 
 
 .serif {
-  font-family: georgia,
-               times,
-               serif;
+  font-family: Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif;
 }
 
 /* Monospaced Typefaces (for code) */
