@@ -5,7 +5,7 @@ MetaDataFormat = "yaml"
 DefaultContentLanguage = "en"
 #SectionPagesMenu = "main"
 theme = "gohugo"
-paginate =                    3
+paginate =                    20
 #paginatePath =                "page"
 
 [params]
