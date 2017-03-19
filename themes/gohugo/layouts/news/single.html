@@ -20,10 +20,15 @@
 {{- partialCached "components/author-github-data" (dict "context" . "size" "110") -}}
   </header>
 
-  <div class="fn f4 pl5 pt3 fl-ns mid-  gray w-two-third-ns athelas nested-copy-line-height nested-links nested-img measure-wide-l mt0-ns">
+  <div class="fn f4 pl5 pt3 fl-ns mid-gray w-two-third-ns athelas nested-copy-line-height nested-links nested-img measure-wide-l mt0-ns">
 
     {{ .Content }}
   </div>
+
+
 </article>
+<div class="cf pa4 nested-links bg-light-gray flex-ns justify-center">
+  {{ partial "previous-next-links" .}}
+</div>
 
 {{ end }}
