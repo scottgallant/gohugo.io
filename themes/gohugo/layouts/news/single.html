@@ -2,14 +2,16 @@
   {{ $currentPageUrl := .URL }}
   {{ $globalVariables := .Site.Data.globals }}
 
-  <article class="cf pv5 center">
-    <h4 class="f6 mb0">
-      {{ humanize .Section | upper  }}
-    </h4>
-    <h1 class="f1 lh-title fw9 mb3 mv0 pt3 primary-color">
-      {{ .Title }}
-    </h1>
-    <header class="bt bw2 mt4 b--mid-gray fn fl-ns w-30 pr4-ns">
+  <article class="cf pv3 pv5-ns center">
+    <header>
+      <h4 class="f6 mb0">
+        {{ humanize .Section | upper  }}
+      </h4>
+      <h1 class="f1 lh-title fw9 mb3 mv0 pt3 primary-color">
+        {{ .Title }}
+      </h1>
+    </header>
+    <aside class="bt bw2 mt4 b--mid-gray fn fl-ns w-30-ns pr4-ns">
       {{ with .Params.description }}
         <h2 class="f3 mid-gray lh-title">
           {{ . | markdownify }}
@@ -19,14 +21,14 @@
         {{ .Date.Format "January 2, 2006" }}
       </time>
       {{- partialCached "components/author-github-data" (dict "context" . "size" "110") -}}
-    </header>
+    </aside>
 
-    <div class="fn f4 pl5 pt3 fl-ns dark-gray w-two-third-ns athelas nested-copy-line-height nested-links nested-img measure-wide-l mt0-ns">
+    <div class="fn f4 pl5-l pt3 fl-ns dark-gray w-two-third-ns athelas nested-copy-line-height nested-links nested-img measure-wide-l mt0-ns">
       {{ .Content }}
     </div>
   </article>
 
-  <div class="cf pa4 nested-links bg-light-gray flex-ns justify-center">
+  <div class="cf mb6 mb0-ns pa2 pa4-ns nested-links bg-light-gray flex-ns justify-center">
     {{ partial "previous-next-links" .}}
   </div>
 
