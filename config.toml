@@ -1,6 +1,6 @@
 languageCode = "en-us"
 title = "Hugo"
-baseURL = "http://example.org/"
+baseURL = "https://gohugo.netlify.com/"
 MetaDataFormat = "yaml"
 DefaultContentLanguage = "en"
 #SectionPagesMenu = "main"
