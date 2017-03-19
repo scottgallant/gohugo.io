@@ -1,4 +1,6 @@
+@import '_variables';
 @import '_tachyons';
+@import '_color-scheme';
 @import '_hugo-internal-template-styling';
 @import '_columns';
 @import '_font-family';
