@@ -1,9 +1,10 @@
-@import '_variables';
-@import '_tachyons';
+@import '_code';
 @import '_color-scheme';
-@import '_hugo-internal-template-styling';
 @import '_columns';
 @import '_font-family';
 @import 'font/_muli-200';
 @import 'font/_muli-400';
 @import 'font/_muli-800';
+@import '_hugo-internal-template-styling';
+@import '_tachyons';
+@import '_variables';
