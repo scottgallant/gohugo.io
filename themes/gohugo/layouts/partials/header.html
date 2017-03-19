@@ -1,5 +1,5 @@
 <header class="bg-primary-color-dark ph4 ph5-ns pv4">
-    {{ partial "svg/github-corner.svg" . }}
+     <!-- partial "svg/github-corner.svg" .  -->
   <nav class="flex-ns flex-wrap w-90-ns items-center ">
 
       <a href="/" class="h3">
@@ -7,6 +7,7 @@
       </a>
 
       <ul class="list ma0 pa0 dn dib-ns">
+          <!-- TODO: Active classes -->
         {{ range .Site.Menus.home }}
           <li class="f4 dib mt4 mh3">
             <a href="{{ .URL }}" class="link white dim">
