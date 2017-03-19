@@ -1,0 +1,12 @@
+
+{{if .PrevInSection}}
+  <a href="{{ .PrevInSection.Permalink }}" class="link mh3">
+    &laquo; {{ .PrevInSection.Title }}
+  </a>
+{{end}}
+
+{{if .NextInSection}}
+  <a href="{{.NextInSection.Permalink}}" class="link mh3">
+    &raquo; {{ .NextInSection.Title }}
+  </a>
+{{end}}
