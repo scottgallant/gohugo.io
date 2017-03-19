@@ -21,6 +21,18 @@ features:
   - heading: Multilingual and i18n
     tagline: Polyglot baked in.
     copy: Hugo provides full i18n support for multi-language sites with the same straightforward development experience Hugo users love in single-language sites.
-
+sections:
+  - heading: "100s of Themes"
+    cta: Check out the themes showcase.
+    link: http://themes.gohugo.io/
+    bg_color_class: bg-accent-color
+    image: /images/homepage-screenshot-hugo-themes.jpg
+    copy: "Hugo provides a robust theming system that is easy to implement but capable of producing even the most complicated websites."
+  - heading: "Capable Templating"
+    cta: Get Started.
+    link: https://hugodocs.info/templates/
+    bg_color_class: bg-primary-color-light
+    image: /images/home-page-templating-example.png
+    copy: "Hugo's Go-based templating provides just the right amount of logic to build anything from the simple to complex. If you prefer Jade/Pug-like syntax, use the Amber or Ace library instead, or mix them however you like."  
 ---
 Hugo is one of the most popular open-source static site generators. With it’s amazing speed and flexibility, Hugo makes building websites fun again.

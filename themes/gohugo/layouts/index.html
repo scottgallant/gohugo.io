@@ -5,11 +5,20 @@
 
 {{ define "main" }}
 
-  {{ partial "home-page-sections/features" . }}
-  {{ partial "home-page-sections/themes" . }}
-  {{ partial "home-page-sections/templating" . }}
-  {{ partial "home-page-sections/installation" . }}
-  {{ partial "home-page-sections/tweets" . }}
-  {{ partial "home-page-sections/open-source-involvement" . }}
+  <section class="w-100 ph4 ph5-ns pv4 pv6-ns pt0-l">
+    {{ partial "home-page-sections/features" . }}
+  </section>
+
+  {{ partial "home-page-sections/features-single" . }}
+
+  <section class="w-100 ph4 ph5-ns pv4 pv6-ns mid-gray bg-white bb bt b--light-gray">
+    {{ partial "home-page-sections/installation" . }}
+  </section>
+  <section class="w-100 ph4 ph5-ns pv4 pv6-ns mid-gray bg-accent-color-dark">
+    {{ partial "home-page-sections/tweets" . }}
+  </section>
+  <section class="w-100 ph4 ph5-ns pt4 pb5 mid-gray bg-primary-color-light bb bt b--light-gray ">
+    {{ partial "home-page-sections/open-source-involvement" . }}
+  </section>
   <!-- TODO: abstract the content from these sections into content pages, if possible, to be more easily edited -->
 {{ end }}
