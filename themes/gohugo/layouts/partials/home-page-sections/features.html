@@ -8,6 +8,7 @@
       {{ $.Scratch.Add "i" 1 }}
       {{ $i := $.Scratch.Get "i" }}
       <div class="mv0 mv4-ns dt w-100 center flex items-center">
+
         <div class="db dtc-ns w-100 w-50-ns pr3-ns{{ if modBool $i 2 }} order-0{{ else }} order-1{{ end }}">
           <h3 class="lh-title black f2 nb3">
             {{ .heading }}
@@ -23,6 +24,7 @@
         <div class="dn db-ns lh-title f4 b w-50-ns v-mid pl4 pr5 accent-color-dark {{ if modBool $i 2 }} tl{{ else}} tr{{ end }}">
           {{.tagline}}
         </div>
+
       </div>
     {{ end }}
   {{ end }}
