@@ -1,61 +1,30 @@
-{{ $globalVariables := .Site.Data.globals }}
-{{ $.Scratch.Add "classBox" "mv0 mv4-ns dt center" }}
-{{ $.Scratch.Add "classBoxInner" "db dtc-ns w-100 w-30-ns" }}
-{{ $.Scratch.Add "classHeading" "lh-title black f2 nb3" }}
-{{ $.Scratch.Add "classCopy" "db dtc-ns v-mid w-100 gray lh-copy bg-white shadow-5 pa4" }}
-{{ $.Scratch.Add "classTagline" "dtc-ns lh-title f4 b w-25-ns v-mid pl4 pr5 accent-color-dark" }}
-{{ $.Scratch.Add "classTaglineMobile" "dn-ns b w-100 f4 mt4 accent-color-dark" }}
+<div class="w-80-l center">
+  <h3 class="f1 primary-color-dark mb2">
+    What makes Hugo so special?
+  </h3>
 
-  <div class="w-80-l center">
-    <h3 class="f1 primary-color-dark mb2">
-      What makes Hugo so special?
-    </h3>
-
-    {{ if .Params.features }}
-      {{ range .Params.features }}
-        {{ $.Scratch.Add "i" 1 }}
-        {{ $i := $.Scratch.Get "i" }}
-
-        {{ if modBool $i 2 }}
-
-          <div class="{{ $.Scratch.Get "classBox" }}">
-            <div class="{{ $.Scratch.Get "classBoxInner" }} pr3-ns">
-              <h3 class="{{ $.Scratch.Get "classHeading" }}">
-                {{ .heading }}
-              </h3>
-              <div class="dn-ns {{ $.Scratch.Get "classTaglineMobile" }}">
-                {{.tagline}}
-              </div>
-              <p class="{{ $.Scratch.Get "classCopy" }}">
-                {{ .copy }}
-              </p>
-            </div>
-            <div class="dn {{ $.Scratch.Get "classTagline" }}">
-              {{.tagline}}
-            </div>
+  {{ if .Params.features }}
+    {{ range .Params.features }}
+      {{ $.Scratch.Add "i" 1 }}
+      {{ $i := $.Scratch.Get "i" }}
+      <div class="mv0 mv4-ns dt w-100 center flex items-center">
+        <div class="db dtc-ns w-100 w-50-ns pr3-ns{{ if modBool $i 2 }} order-0{{ else }} order-1{{ end }}">
+          <h3 class="lh-title black f2 nb3">
+            {{ .heading }}
+          </h3>
+          <div class="tagline-mobile dn-ns b w-100 f4 mt4 accent-color-dark">
+            {{.tagline}}
           </div>
+          <p class="db dtc-ns v-mid w-100 gray lh-copy bg-white shadow-5 pa4">
+            {{ .copy }}
+          </p>
+        </div>
 
-        {{ else }}
-
-          <div class="{{ $.Scratch.Get "classBox" }}">
-            <div class="dn {{ $.Scratch.Get "classTagline" }} tr">
-              {{.tagline}}
-            </div>
-            <div class="{{ $.Scratch.Get "classBoxInner" }} pl3-ns">
-              <h3 class="{{ $.Scratch.Get "classHeading" }}">
-                {{ .heading }}
-              </h3>
-              <div class="dn-ns {{ $.Scratch.Get "classTaglineMobile" }}">
-                {{.tagline}}
-              </div>
-              <p class="{{ $.Scratch.Get "classCopy" }}">
-                {{ .copy }}
-              </p>
-            </div>
-          </div>
-
-        {{ end }}
-      {{ end }}
+        <div class="dn db-ns lh-title f4 b w-50-ns v-mid pl4 pr5 accent-color-dark {{ if modBool $i 2 }} tl{{ else}} tr{{ end }}">
+          {{.tagline}}
+        </div>
+      </div>
     {{ end }}
+  {{ end }}
 
-  </div>
+</div>
