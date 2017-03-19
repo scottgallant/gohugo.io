@@ -15,7 +15,7 @@ features:
     copy: Hugo loves Markdown because of its simple content format, but there are times when markdown falls short. We think this contradicts the beautiful simplicity of markdown’s syntax. Hugo created shortcodes to circumvent these limitations.
 
   - heading: Built-in Templates
-    tagline: The Community has your back with common patterns to get your work done quickly.
+    tagline: Hugo has your back with common patterns to get your work done quickly.
     copy: Hugo ships with pre-made templates to make quick work of SEO, commenting, analytics and other functions.
 
   - heading: Multilingual and i18n
