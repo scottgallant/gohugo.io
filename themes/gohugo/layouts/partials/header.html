@@ -17,7 +17,8 @@
 <header class="bg-primary-color-dark ph4 ph5-ns flex pv4">
      <!-- partial "svg/github-corner.svg" .  -->
      <!-- TODO: Flex here breaks down if there are a lot of categories. -->
-
+      <!-- NOTE: flex is bothersome here, but not an issue if there aren’t too many
+categories. There shouldn’t be, but should plan for the edge case. -->
 
       <a href="/" class="dib">
         <img src="{{ .Site.Params.logo }}" alt="Hugo Logo" class="h3 mr3-l dib">
