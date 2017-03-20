@@ -1,6 +1,6 @@
 +++
 title = ""
+categories = []
 date = ""
 description = ""
-link = ""
 +++
