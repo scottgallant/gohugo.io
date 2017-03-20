@@ -38,9 +38,9 @@ paginate =                    20
   url = "http://gohugo.io/overview/introduction/"
 
 [[menu.home]]
-  name = "Blog"
+  name = "News"
   weight = 1
-  identifier = "blog"
+  identifier = "news"
   url = "/news/"
 
 [[menu.home]]

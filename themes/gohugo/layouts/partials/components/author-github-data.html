@@ -7,14 +7,15 @@
         <h3 class="f4 dib">
             {{ $user_json.name }}
         </h3>
-        <a href="{{ $user_json.url }}" class="link dim v-mid ml2 dib">
-          {{ partial "svg/github-squared.svg" (dict "fill" "gray" "width" "16" "height" "18") }}
-        </a>
+
       {{ end }}
       {{ if $user_json.bio }}
         <p class="lh-copy measure center mt0 f6 black-60">
           {{ $user_json.bio }}
         </p>
       {{ end }}
+      <a href="{{ $user_json.html_url }}" class="link dim v-mid ml2 dib">
+        {{ partial "svg/github-squared.svg" (dict "fill" "gray" "width" "16" "height" "18") }}
+      </a>
   </aside>
 {{ end }}
