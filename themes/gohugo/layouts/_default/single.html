@@ -30,7 +30,9 @@
         <time class="f6 ttu tracked gray" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
           {{ .Date.Format "January 2, 2006" }}
         </time>
-        {{- partial "components/author-github-data" (dict "context" . "size" "110") -}}
+        <!--
+        NOTE: Removed to test builds without it. 
+        partial "components/author-github-data" (dict "context" . "size" "110") -->
       </aside>
 
       <div class="fn f4 pl5-l pt3 dark-gray w-100 w-two-third-l serif nested-copy-line-height nested-links nested-img measure-wide-l mt0-ns">
