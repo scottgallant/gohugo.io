@@ -39,7 +39,7 @@ paginate =                    20
 
 [[menu.home]]
   name = "News"
-  weight = 1
+  weight = 100
   identifier = "news"
   url = "/news/"
 

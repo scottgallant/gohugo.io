@@ -13,6 +13,10 @@
           <li class="f4 f3-ns dib mt4 mh3">
             <a href="{{ .URL }}" class="link white dim">
               {{ .Name }}
+              {{ if ne .Identifier "news" }}
+              {{ partial "svg/link-ext.svg" (dict "fill" "#ccc" "size" "14") }}
+              {{ end }}
+
             </a>
           </li>
         {{ end }}
