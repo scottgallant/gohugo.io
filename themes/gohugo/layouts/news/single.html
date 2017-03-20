@@ -2,8 +2,9 @@
   {{ $currentPageUrl := .URL }}
   {{ $globalVariables := .Site.Data.globals }}
 
-  <article class="cf ph4 ph5-ns pv3 pv5-ns center">
-    <header>
+  <article class="cf ph4 ph5-ns pv3 pv5-ns">
+      <!-- header spans the full width -->
+    <header class="flex-none w-100">
       <h4 class="f6 mb0">
         {{ humanize .Section | upper  }}
       </h4>
@@ -11,21 +12,25 @@
         {{ .Title }}
       </h1>
     </header>
-    <aside class="bt bw2 mt4 b--mid-gray fn fl-ns w-30-ns pr4-ns">
-      {{ with .Params.description }}
-        <h2 class="f3 mid-gray lh-title">
-          {{ . | markdownify }}
-        </h2>
-      {{ end }}
-      <time class="f6 ttu tracked gray" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-        {{ .Date.Format "January 2, 2006" }}
-      </time>
-      {{- partialCached "components/author-github-data" (dict "context" . "size" "110") -}}
-    </aside>
 
-    <div class="fn f4 pl5-l pt3 fl-ns dark-gray w-two-third-ns serif nested-copy-line-height nested-links nested-img measure-wide-l mt0-ns">
-      {{ .Content }}
+    <div class="flex-l">
+      <aside class="bt bw2 mt4 b--mid-gray fn w-100 w-30-l pr4-ns">
+        {{ with .Params.description }}
+          <h2 class="f3 mid-gray lh-title">
+            {{ . | markdownify }}
+          </h2>
+        {{ end }}
+        <time class="f6 ttu tracked gray" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+          {{ .Date.Format "January 2, 2006" }}
+        </time>
+        {{- partialCached "components/author-github-data" (dict "context" . "size" "110") -}}
+      </aside>
+
+      <div class="fn f4 pl5-l pt3 dark-gray w-100 w-two-third-l serif nested-copy-line-height nested-links nested-img measure-wide-l mt0-ns">
+        {{ .Content }}
+      </div>
     </div>
+
   </article>
 
   <div class="cf mb6 mb0-ns pa2 pa4-ns nested-links bg-light-gray flex-ns justify-center">
