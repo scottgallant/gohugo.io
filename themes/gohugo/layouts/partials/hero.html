@@ -1,50 +1,19 @@
-<header class="bg-primary-color-dark ph4 pv4-l">
-    {{ partial "svg/github-corner.svg" . }}
-  <div class="flex-ns flex-wrap w-90-ns center justify-center-ns pv4 pv6-ns">
-
-    <section class="w-100 w-50-l tc">
-
-      <a href="/" class="w-70 w-70-ns center db tc link">
-        <img src="{{ .Site.Params.logo }}" alt="Hugo Logo">
-      </a>
-
-      <ul class="list tc ma0 pa0 dn db-ns">
-        {{ range .Site.Menus.home }}
-          <li class="f4 f3-ns dib mt4 mh3">
-            <a href="{{ .URL }}" class="link white dim">
-              {{ .Name }}
-              {{ if ne .Identifier "news" }}
-              {{ partial "svg/link-ext.svg" (dict "fill" "#ccc" "size" "14") }}
-              {{ end }}
-
-            </a>
-          </li>
-        {{ end }}
-      </ul>
-
-      <div class="w4 mv4 center dn db-ns">
-        <a class="f6 db link grow tc v-mid bg-blue white ba b--blue ph3 pv2 br1" href="/">Quick Start</a>
-      </div>
-
-    </section>
-
-    <section class="w-100 w-50-l tc">
-
+<header class="bg-primary-color-dark pv4-l">
+  {{ partial "svg/github-corner.svg" . }}
+  <div class="flex-ns flex-wrap w-90-ns center justify-center-ns pb5">
+    <section class="w-100 w-60-l tc">
       {{ with .Site.Params.description }}
-        <h2 class="f3 f2-l white-90 m0 lh-title pv3 pv0-ns">
+        <h2 class="f3 f1-l white-90 m0 lh-title pv3 pv0-ns">
           {{ . }}
         </h2>
       {{ end }}
-
-      <div class="lh-copy f4 w-90-ns center fw2 moon-gray tc tc-ns">
+      <div class="lh-copy f4 w-90-ns center fw2 silver tc tc-ns">
         {{ .Content }}
       </div>
-
-      <div class="w4 mv4 center dn-ns">
+      <div class="w4 mv4 center">
         <a class="f6 db link grow tc v-mid bg-blue white ba b--blue ph3 pv2 br1" href="/">Quick Start</a>
       </div>
-
     </section>
-
   </div>
+
 </header>

@@ -1,46 +1,19 @@
 {{ $currentPage := . }}
-<nav class="w-100 relative bg-primary-color-dark">
-  <ul class="list absolute right-0 mr-6 ml0 mv0 pa0 dn dib-ns">
+{{ partial "svg/github-corner.svg" . }}
+<header class="bg-primary-color-dark ph4 ph5-ns flex pb5">     
+  <ul class="list ma0 pa0 dn dib-ns">
       <!-- TODO: Active classes -->
-    {{ range .Site.Menus.home }}
-      <li class="f6 dib mv2 mh3 v-top">
-        <a href="{{ .URL }}" class="link  dim{{if $currentPage.IsMenuCurrent "home" . }} gray{{ else }} moon-gray{{end}}">
-          {{ .Name }}
+      <li class="f5 dib mt4 mh3 v-top white">
+        <a href="/news/" class="link white dim">
+            News:
         </a>
       </li>
-    {{ end }}
+      {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+        <li class="f5 dib mt4 mr3 v-top">
+          <a href="{{ "/categories/" | relLangURL }}{{ $name }}" class="link bg-primary-color white ph3 pv1 br2 hover-bg-accent-color-light">
+            {{ $name | humanize }}
+          </a>
+        </li>
+      {{ end }}
   </ul>
-
-</nav>
-
-
-<header class="bg-primary-color-dark ph4 ph5-ns flex pv4">
-     <!-- partial "svg/github-corner.svg" .  -->
-     <!-- TODO: Flex here breaks down if there are a lot of categories. -->
-      <!-- NOTE: flex is bothersome here, but not an issue if there aren’t too many
-categories. There shouldn’t be, but should plan for the edge case. -->
-
-      <a href="/" class="dib">
-        <img src="{{ .Site.Params.logo }}" alt="Hugo Logo" class="h3 mr3-l dib">
-      </a>
-
-      <ul class="list ma0 pa0 dn dib-ns">
-          <!-- TODO: Active classes -->
-          <li class="f5 dib mt4 mh3 v-top white">
-            <a href="/news/" class="link white dim">
-                News:
-            </a>
-          </li>
-          {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
-            <li class="f5 dib mt4 mr3 v-top">
-              <a href="{{ "/categories/" | relLangURL }}{{ $name }}" class="link bg-primary-color white ph3 pv1 br2 hover-bg-accent-color-light">
-                {{ $name | humanize }}
-              </a>
-            </li>
-          {{ end }}
-      </ul>
-
-
-
-
 </header>
