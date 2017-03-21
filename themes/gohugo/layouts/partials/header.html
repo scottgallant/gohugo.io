@@ -1,15 +1,15 @@
 {{ $currentPage := . }}
 {{ partial "svg/github-corner.svg" . }}
-<header class="bg-primary-color-dark ph4 ph5-ns flex pb5">     
+<header class="bg-light-gray ph4 ph5-ns flex pv4">
   <ul class="list ma0 pa0 dn dib-ns">
       <!-- TODO: Active classes -->
-      <li class="f5 dib mt4 mh3 v-top white">
-        <a href="/news/" class="link white dim">
+      <li class="f5 dib mh3 v-top white">
+        <a href="/news/" class="link primary-color-dark dim">
             News:
         </a>
       </li>
       {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
-        <li class="f5 dib mt4 mr3 v-top">
+        <li class="f5 dib mr3 v-top">
           <a href="{{ "/categories/" | relLangURL }}{{ $name }}" class="link bg-primary-color white ph3 pv1 br2 hover-bg-accent-color-light">
             {{ $name | humanize }}
           </a>
