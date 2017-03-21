@@ -30,18 +30,12 @@ paginate =                    20
   series = "series"
 
 
-
 [[menu.home]]
   name = "Docs"
   weight = 1
   identifier = "docs"
   url = "http://gohugo.io/overview/introduction/"
 
-[[menu.home]]
-  name = "News"
-  weight = 100
-  identifier = "news"
-  url = "/news/"
 
 [[menu.home]]
   name = "Community"
@@ -54,3 +48,15 @@ paginate =                    20
   weight = 15
   identifier = "themes"
   url = "http://themes.gohugo.io/"
+
+[[menu.home]]
+  name = "Github"
+  weight = 15
+  identifier = "github"
+  url = "https://github.com/spf13/hugo"
+
+[[menu.home]]
+  name = "News"
+  weight = 100
+  identifier = "news"
+  url = "/news/"
